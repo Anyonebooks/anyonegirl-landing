@@ -1,0 +1,130 @@
+@use 'sass:string';
+// $breakpoints: (
+//   "mobile": "720px",
+//   "tablet": "920px",
+//   "desktop": "1380px",
+// );
+//
+@mixin breakpoint($size: 'mobile') {
+  $use-min-width: string.index($size, '+') != null;
+  $size: if(
+    $use-min-width,
+    string.slice($size, 1, string.length($size) - 1),
+    $size
+  );
+
+  @if $use-min-width {
+    @media (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}
+
+@mixin desktopDown {
+  @include breakpoint('1380px') {
+    @content;
+  }
+}
+
+@mixin desktopUp {
+  @include breakpoint('1380px+') {
+    @content;
+  }
+}
+
+@mixin tabletDown {
+  @include breakpoint('920px') {
+    @content;
+  }
+}
+
+@mixin tabletUp {
+  @include breakpoint('920px+') {
+    @content;
+  }
+}
+
+@mixin mobileUp {
+  @include breakpoint('720px+') {
+    @content;
+  }
+}
+
+@mixin mobileDown {
+  @include breakpoint('720px') {
+    @content;
+  }
+}
+
+@mixin hasMouse {
+  @media (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin hasTouch {
+  @media (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin onHover {
+  @media (pointer: fine) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin onHoverOrActive {
+  @media (pointer: fine) {
+    &--active,
+    &:active,
+    &:hover,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin onButtonHover {
+  @media (pointer: fine) {
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin onButtonActive {
+  @media (pointer: fine) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin onDown {
+  @media (pointer: fine) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin onClick {
+  @media (pointer: fine) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@function fullHeight() {
+  // @return calc(100vh - var(--1vh));
+  @return 100svh;
+}

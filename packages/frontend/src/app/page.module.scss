@@ -1,0 +1,136 @@
+@import "../styles/responsive";
+@import "../styles/typography";
+
+.main {
+  min-height: 100svh;
+  padding: var(--space-12) var(--inset);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: var(--space-40);
+
+  text-align: center;
+}
+
+.header {
+  padding: 0 calc(3 * var(--column) + 3 * var(--gutter)) var(--space-16);
+  @include typeLarge;
+
+  @include mobileDown {
+    padding: 0;
+  }
+}
+
+.title,
+.introduction,
+.linkExclusive {
+  color: var(--color-foreground);
+  transition: color 0.3s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.header:has(.linkExclusive:hover) .title,
+.header:has(.linkExclusive:hover) .introduction {
+  color: var(--color-charcoal-300);
+}
+
+.header:has(.linkExclusive:hover) .linkExclusive {
+  color: var(--color-charcoal-300);
+}
+
+.linkExclusive:hover {
+  color: var(--color-foreground) !important;
+}
+
+.title,
+.introduction,
+.linkExclusive {
+  transition: color 0.3s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.linkNormal {
+  transition: color 0.3s cubic-bezier(0, 0, 0.58, 1);
+}
+
+.linkNormal:hover {
+  color: var(--color-charcoal-500);
+}
+
+.titleLink {
+  display: inline;
+}
+
+.introduction {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+}
+
+.italicLink {
+  font-style: italic;
+}
+
+.image {
+  padding: 0 calc(7 * var(--column) + 7 * var(--gutter));
+
+  @include mobileDown {
+    padding: 0 calc(1 * var(--column) + 1 * var(--gutter));
+  }
+}
+
+.typeLargeAllCaps {
+  @include typeLargeAllCaps;
+}
+
+.introduction {
+  margin-top: 1em;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: var(--s16);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-8);
+}
+
+.footerLinks {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+
+  @include mobileDown {
+    position: static;
+    justify-content: center;
+    column-gap: var(--space-16);
+  }
+}
+
+.bookLinks {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--space-2);
+}
+
+.linkNormal {
+  pointer-events: auto;
+}
+
+.footer > *:first-child {
+  justify-self: start;
+}
+
+.footer > *:last-child {
+  justify-self: end;
+}
+
+.headingItalic {
+  font-style: italic;
+  margin-bottom: var(--space-4);
+}

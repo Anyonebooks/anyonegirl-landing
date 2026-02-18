@@ -1,0 +1,176 @@
+@use "./helpers.scss" as *;
+@use "./reset.scss";
+@use "./fonts.scss";
+@use "./typography.scss";
+
+:root {
+  --1vh: 1svh;
+  --1vw: 1svw;
+
+  --columns: 24;
+  --inset: 26px;
+  --gutter: 8px;
+  --scroll-inset: 16px;
+
+  --container: calc(100svw - (var(--inset) * 2) - var(--scroll-inset));
+
+  --column: calc(
+    (1 / var(--columns)) *
+      (100svw - (var(--inset) * 2) - ((var(--columns) - 1) * var(--gutter)))
+  );
+
+  --common-grid: repeat(var(--columns), 1fr);
+  --inner-grid: repeat(calc(var(--columns) - 4), 1fr);
+
+  --menu-width: calc(var(--column) * 4 + var(--gutter) * 3);
+
+  --color-foreground: #010101;
+  --color-background: #fefdfc;
+  --color-red: #db2027;
+
+  --color-black: #010101;
+  --color-charcoal-900: #2e3030;
+  --color-charcoal-750: #5f6060;
+  --color-charcoal-500: #8c8e8e;
+  --color-charcoal-300: #d8d8dc;
+  --color-charcoal-250: #e9e8e6;
+  --color-charcoal-100: #f5f5f5;
+  --color-white: #fefdfc;
+  --color-grey-500: #b6b6b6;
+
+  --color-offwhite: #f7f4ea;
+
+  --color-success: #3a7d33;
+  --color-error: #d31d1d;
+
+  --font-family-stempel-garamond: "Stempel Garamond LT Pro", Georgia, serif;
+
+  --font-size-base: 1rem;
+  --font-size-10: 10px;
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-20: 20px;
+  --font-size-21: 21px;
+  --font-size-22: 22px;
+  --font-size-24: 24px;
+  --font-size-36: 36px;
+
+  --line-height-12: 12px;
+  --line-height-13: 13px;
+  --line-height-16: 16px;
+  --line-height-18: 18px;
+  --line-height-20: 20px;
+  --line-height-24: 24px;
+  --line-height-40: 40px;
+  --space-top: 180px;
+  --space-bottom: 180px;
+
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-44: 44px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-120: 120px;
+  --space-175: 175px;
+  --space-200: 200px;
+  --space-300: 300px;
+
+  --ease-out: cubic-bezier(0, 0, 0.58, 1) 0.3s;
+
+  --header-height: 42px;
+
+  @include tabletDown {
+    --space-80: 64px;
+    --space-120: 80px;
+    --space-200: 120px;
+    --space-300: 200px;
+  }
+
+  @include mobileDown {
+    --inset: 16px;
+    --columns: 6;
+    --space-top: 80px;
+    --gutter: 8px;
+    --inner-grid: var(--common-grid);
+
+    --space-16: 8px;
+    --space-24: 16px;
+    --space-32: 24px;
+    --space-40: 32px;
+    --space-64: 40px;
+    --space-80: 64px;
+    --space-120: 80px;
+    --space-200: 120px;
+    --space-300: 200px;
+
+    --header-height: 57px;
+  }
+}
+
+html,
+body {
+  @include typeBody;
+
+  & {
+    color: var(--color-foreground);
+    background: var(--color-background);
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-weight: 400;
+}
+
+::selection {
+  color: var(--color-background);
+  background: var(--color-foreground);
+}
+
+img {
+  width: 100%;
+}
+
+a,
+button {
+  font: inherit;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.sanity-link {
+  &__label {
+    display: none;
+  }
+}
+
+.sanity-content {
+  @include spacing;
+
+  h2 {
+    @include uppercase;
+  }
+
+  * + h2 {
+    margin-top: 2em;
+  }
+
+  a {
+    // @include linkUnderline;
+  }
+}

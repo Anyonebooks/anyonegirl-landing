@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "composite": false,
+    "module": "esnext",
+    "allowJs": true,
+    "checkJs": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "useUnknownInCatchVariables": false,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+    "baseUrl": ".",
+    "target": "es2019",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "outDir": "dist",
+    "rootDir": "../../"
+  },
+  "include": ["**/*.ts", "**/*.tsx", "../../packages/**/*"],
+  "exclude": ["node_modules"]
+}
