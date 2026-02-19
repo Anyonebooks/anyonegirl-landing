@@ -61,7 +61,7 @@ export default function Home() {
             <li>
               <a
                 className={styles.linkNormal}
-                href="https://anyonebooks.com/products/anyonebooks-01"
+                href="https://www.anyonebooks.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -71,7 +71,7 @@ export default function Home() {
             <li>
               <a
                 className={styles.linkNormal}
-                href="https://anyonebooks.com/products/anyonebooks-02"
+                href="https://www.anyonebooks.com/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -88,7 +88,7 @@ export default function Home() {
 
           <a
             className={styles.linkNormal}
-            href="https://www.instagram.com/anyonegirl/"
+            href="https://www.instagram.com/anyonegirl"
             target="_blank"
             rel="noopener noreferrer"
           >
