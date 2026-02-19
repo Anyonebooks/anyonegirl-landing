@@ -15,7 +15,7 @@ export default function Home() {
           <h1
             className={`${styles.typeLargeAllCaps} ${styles.titleLink}  ${styles.linkExclusive}`}
           >
-            anyonebooks.com
+            <a href="https://www.anyonebooks.com/">anyonebooks.com</a>
           </h1>
         </header>
 
