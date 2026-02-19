@@ -36,7 +36,15 @@ export default function Home() {
           </p>
           <p>
             <span className={styles.typeLargeAllCaps}>ANYONEGIRL</span> was
-            founded and edited by Yasmine Ganley.
+            founded and edited by{" "}
+            <a
+              className={styles.linkExclusive}
+              href="https://www.instagram.com/anyonegirl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Yasmine Ganley.
+            </a>
             <br />
             Her current practice involves a combination of creative direction,
             brand consultancy, storytelling and photography, collaborating with
