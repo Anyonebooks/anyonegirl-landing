@@ -22,8 +22,6 @@
   --common-grid: repeat(var(--columns), 1fr);
   --inner-grid: repeat(calc(var(--columns) - 4), 1fr);
 
-  --menu-width: calc(var(--column) * 4 + var(--gutter) * 3);
-
   --color-foreground: #010101;
   --color-background: #fefdfc;
   --color-red: #db2027;

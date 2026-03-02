@@ -38,7 +38,7 @@ export default function Home() {
             <span className={styles.typeLargeAllCaps}>ANYONEGIRL</span> was
             founded and edited by{" "}
             <a
-              className={styles.linkExclusive}
+              className={`${styles.italicLink} ${styles.linkExclusive}`}
               href="https://www.instagram.com/anyonegirl"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,13 +53,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className={styles.image}>
-        <Image
-          src="/images/anyonebooks_hero.jpg"
-          alt="anyonegirl"
-          width={1923}
-          height={1281}
-        />
+      <div className={styles.imageWrapper}>
+        <a href="https://www.anyonebooks.com/" className="image-link" target="_blank" rel="noopener noreferrer">
+          <div className={styles.image}>
+            <Image
+              src="/images/anyonebooks_hero.jpg"
+              alt="anyonegirl"
+              width={1923}
+              height={1281}
+            />
+          </div>
+        </a>
       </div>
 
       <footer className={styles.footer}>

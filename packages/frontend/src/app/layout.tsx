@@ -3,21 +3,21 @@ import "@/styles/app.scss";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "ANYONEBOOKS",
+  title: "ANYONEGIRL",
   description:
     "ANYONEBOOKS is an independent publishing imprint and creator of anyonegirl journal. Founded by Yasmine Ganley and Natasha Mead, we work with creative individuals and organisations to design and produce contemporary print publications for their work.",
   openGraph: {
-    title: "ANYONEBOOKS",
+    title: "ANYONEGIRL",
     description:
       "ANYONEBOOKS is an independent publishing imprint and creator of anyonegirl journal. Founded by Yasmine Ganley and Natasha Mead, we work with creative individuals and organisations to design and produce contemporary print publications for their work.",
-    url: "https://anyonebooks.com",
-    siteName: "ANYONEBOOKS",
+    url: "https://anyonegirl.com",
+    siteName: "ANYONEGIRL",
     images: [
       {
         url: "/Opengraph.jpg",
         width: 1200,
         height: 630,
-        alt: "ANYONEBOOKS Open Graph Image",
+        alt: "ANYONEGIRL Open Graph Image",
       },
     ],
     locale: "en_US",

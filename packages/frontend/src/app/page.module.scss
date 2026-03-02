@@ -14,12 +14,18 @@
 }
 
 .header {
+  margin: 0 auto;
   padding: 0 calc(3 * var(--column) + 3 * var(--gutter)) var(--space-16);
   @include typeLarge;
 
   @include mobileDown {
     padding: 0;
   }
+}
+
+.introduction {
+  max-width: 1070px;
+  margin: 0 auto;
 }
 
 .title,
@@ -70,7 +76,7 @@
   font-style: italic;
 }
 
-.image {
+.imageWrapper {
   padding: 0 calc(7 * var(--column) + 7 * var(--gutter));
 
   @include mobileDown {
@@ -108,7 +114,7 @@
   @include mobileDown {
     position: static;
     justify-content: center;
-    column-gap: var(--space-16);
+    column-gap: var(--space-32);
   }
 }
 
