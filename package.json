@@ -7,12 +7,16 @@
         "packages/*"
     ],
     "scripts": {
-        "dev": "yarn workspace frontend dev"
+        "dev": "yarn workspace frontend dev",
+        "test": "pxltest-root && pxltest-workspaces test",
+        "lint": "pxltest-workspaces lint"
     },
     "license": "UNLICENSED",
-    "packageManager": "yarn@1.22.17",
+    "packageManager": "yarn@1.22.22",
     "devDependencies": {
-        "concurrently": "^8.2.2"
+        "concurrently": "^8.2.2",
+        "@pxlstudio/test-root": "^2026.4.171658",
+        "@pxlstudio/test-core": "^2026.4.171658"
     },
     "dependencies": {
         "typescript": "5.3.3"

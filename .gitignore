@@ -70,3 +70,5 @@ secrets.json
 .yarn/cache
 .aider*
 .nvmrc
+.yalc/
+yalc.lock
